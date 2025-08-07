@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const VIEWPORT_ZOOM = { width: 640, height: 512 };
+        window.onmessage = async (event) => {
+            if (event.data === 'dummyMessage') {
+                // document.querySelector('#test-ctn').textContent = 'Message received from parent window';
+
+                // for(let i=0;i<10;i++) {
+                //     await window._domForgeCDP({ method: 'tab', sleep: 200 });
+                // }
+
+                //CDP Command
+                // chrome.runtime --> sendMessage({ type: 'test-message', data: 'Hello from iframe' })
+            
+                // let configuration = {
+                //     runOnly: {
+                //     type: 'rule',
+                //     values: ['test-rule'] // Run with 2.1 AA by default with best practices disabled
+                //     },
+                //     rules: {
+                //     'audio-caption': { enabled: false },
+                //     'frame-tested': { enabled: false },
+                //     'color-contrast': { enabled: false },
+                //     },
+                //     resultTypes: ['violations', 'incomplete'],
+                //     iframes: true
+                // }
+
+
+                // axe.run(document, configuration).then(results => {
+                //     console.log("Results are ", results);
+                // }).catch(err => console.log("Error is ", err));
+            }
+        };  
+    </script>
+</head>
+<body>
+    <div id="test-ctn">Testing..</div>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+    <button>Button 5</button>
+    <button>Button 6</button>
+</body>
+</html>
